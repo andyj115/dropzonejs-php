@@ -20,6 +20,7 @@
         <link rel='stylesheet' href='//unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css'>
         <link rel='stylesheet' href='//fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Ubuntu:300,400'>
+        <link rel='stylesheet' href='dropzone.css'>
         
         <style>
             * {
@@ -77,8 +78,8 @@
             <div class='carousel-item'><img class='d-block w-100' src='images/00016.jpg'></div>
         </div>
 
-        <div class="modal fade bd-example-modal" id="formPDFLoad" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal" role="document">
+        <div class="modal fade show" id="formPDFLoad" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
 
                     <div class="modal-header">
@@ -100,8 +101,8 @@
         <script src='//unpkg.com/jquery@3.4.1/dist/jquery.min.js'></script>
         <script src='//unpkg.com/popper.js@1.12.6/dist/umd/popper.min.js'></script>
         <script src='//unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.min.js'></script>
-
         <script src="dropzone.js"></script>
+
         <script>
             $(document).ready( () => {
 
