@@ -1,2 +1,2 @@
 # dropzonejs-php
- DropzoneJS over a PHP serve
+studing DropzoneJS over a PHP server to import and store PDF files
