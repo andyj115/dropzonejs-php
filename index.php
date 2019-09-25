@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="pdf-upload" class="dropzone">
+                        <form action="pdf-upload/index.php" class="dropzone">
                             <div class="fallback">
                                 <input name="file" type="file" multiple />
                             </div>
@@ -111,16 +111,16 @@
                 // initialize theme (material-bootstrap - https://fezvrasta.github.io/bootstrap-material-design)
                 $('body').bootstrapMaterialDesign();
 
-                var $item = $('.carousel-item'); 
-                var $wHeight = $(window).height();
+                let $item = $('.carousel-item'); 
+                let $wHeight = $(window).height();
 
                 $item.eq(0).addClass('active');
                 $item.height($wHeight); 
                 $item.addClass('full-screen');
 
                 $('.carousel img').each( () => {
-                    var $src = $(this).attr('src');
-                    var $color = $(this).attr('data-color');
+                    let $src = $(this).attr('src');
+                    let $color = $(this).attr('data-color');
                     $(this).parent().css({
                         'background-image' : 'url(' + $src + ')',
                         'background-color' : $color
