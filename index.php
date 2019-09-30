@@ -1,15 +1,17 @@
-
 <?php
 
 $storeFolder = 'uploads';
 
 if( !empty( $_FILES )  &&  $_FILES['file']['error'] == 0 ) {
     
-    move_uploaded_file( 
-        $_FILES['file']['tmp_name'],
-        __DIR__ . '/'. $storeFolder . '/' . $_FILES['file']['name'] );
+    if( strpos( strtolower( $_FILES['file_data']['name'] ) , 'pdf') > 0) {
 
-    echo( '👍🏻' );
+        move_uploaded_file( 
+            $_FILES['file']['tmp_name'],
+            __DIR__ . '/'. $storeFolder . '/' . $_FILES['file']['name'] );
+
+        echo( '👍🏻' );
+    }
 
     return;
 }
@@ -117,7 +119,6 @@ if( !empty( $_FILES )  &&  $_FILES['file']['error'] == 0 ) {
         <script src='//unpkg.com/popper.js@1.12.6/dist/umd/popper.min.js'></script>
         <script src='//unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.min.js'></script>
         <script src="dropzone.js"></script>
-
         <script>
             $(document).ready( () => {
 
