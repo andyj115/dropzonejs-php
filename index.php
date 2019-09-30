@@ -1,5 +1,20 @@
 
-<!DOCTYPE html>
+<?php
+
+$storeFolder = 'uploads';
+
+if( !empty( $_FILES )  &&  $_FILES['file']['error'] == 0 ) {
+    
+    move_uploaded_file( 
+        $_FILES['file']['tmp_name'],
+        __DIR__ . '/'. $storeFolder . '/' . $_FILES['file']['name'] );
+
+    echo( '👍🏻' );
+
+    return;
+}
+
+?><!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
@@ -87,7 +102,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="pdf-upload/index.php" class="dropzone">
+                        <form action="?" class="dropzone">
                             <div class="fallback">
                                 <input name="file" type="file" multiple />
                             </div>
