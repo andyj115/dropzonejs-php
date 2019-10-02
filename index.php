@@ -154,20 +154,12 @@ if( !empty( $_FILES )  &&  $_FILES['file']['error'] == 0 ) {
                     pause: 'false'
                 });
 
-                // reopen form if closed
+                // reopen form if modal is closed
                 $('#formPDFLoad').modal('show');
                 $('#formPDFLoad').on('hidden.bs.modal', (e) => {
                     $('#formPDFLoad').modal('show');
                 });
 
-                // ensure focus on field
-            //  $('#formPDFLoad').on('shown.bs.modal', function() {
-            //      if( $("#inputEmail").val() > '' ) {
-            //          $("#inputPassword").focus();
-            //      } else {
-            //          $("#inputEmail").focus();
-            //      }
-            //  });
             });        
         </script>
 
